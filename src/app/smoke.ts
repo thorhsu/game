@@ -19,7 +19,7 @@ export class Smoke {
         this.frameHeight = frameHeight;
         this.frameWidth = frameWidth;
     }
-    update() {
+    canUpdate() {
        this.x += this.vx;
        this.y += this.vy;
        this.size += 0.8; // 煙尺寸逐漸變大

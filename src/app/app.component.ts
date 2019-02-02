@@ -26,7 +26,7 @@ export class AppComponent {
     ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     from(this.smokes)
     .pipe(
-      filter((smoke: Smoke) => smoke.update()),
+      filter((smoke: Smoke) => smoke.canUpdate()),
       tap((smoke: Smoke) =>  smoke.draw(ctx, this.smokeParticle)),
       toArray()
     ).subscribe((smokes: Smoke[]) => this.smokes = smokes);
