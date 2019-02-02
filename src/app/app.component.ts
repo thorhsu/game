@@ -40,10 +40,8 @@ export class AppComponent {
     const smoke = new Smoke(x, y, vx, vy, this.windSpeed, this.ctx.canvas.width, this.ctx.canvas.height);
     this.smokes.push(smoke);
   }
-
   initiate(canvas) {
     this.ctx = canvas.getContext('2d');
-    console.log(this.ctx);
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     this.smokeParticle = new Image();
     this.smokeParticle.src = '../assets/train/particle-smoke.png';
